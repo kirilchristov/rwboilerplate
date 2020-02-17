@@ -28,11 +28,20 @@ npm install url-loader --save-dev
 
 style-loader css-loader sass-loader
 
+5.Babel 
+@babel/plugin-proposal-class-properties
+@babel/plugin-proposal-export-default-from
+@babel/polyfill
+@babel/cli
+babel-plugin-syntax-async-functions
+@babel/plugin-transform-async-to-generator
+@babel/plugin-transform-runtime
+
 
 
 All in one: 
 
 (1)
-npm install --save-dev @babel/preset-react @babel/core @babel/preset-env babel-loader webpack webpack-dev-server webpack-cli @babel/preset-react react react-dom react-hot-loader eslint-loader babel-eslint url-loader style-loader css-loader sass-loader
+npm install --save-dev @babel/preset-react @babel/core @babel/preset-env babel-loader webpack webpack-dev-server webpack-cli @babel/preset-react react react-dom react-hot-loader eslint-loader babel-eslint url-loader style-loader css-loader sass-loader @babel/plugin-proposal-class-properties @babel/plugin-proposal-export-default-from @babel/polyfill @babel/cli babel-plugin-syntax-async-functions @babel/plugin-transform-async-to-generator @babel/plugin-transform-runtime
 (2)
 npx install-peerdeps --dev eslint-config-airbnb

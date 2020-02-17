@@ -2,15 +2,14 @@ const webpack = require('webpack');
 
 
 module.exports = {
-  // 1
-  entry: './src/index.js',
+  entry: ['@babel/polyfill', './src/index.js'],
   // Babel Loader
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader'/*,'eslint-loader'*/],
+        use: ['babel-loader', 'eslint-loader'],
       },
       {
         test: /\.(woff|woff2)$/,
@@ -28,23 +27,22 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader'
-        ]
+          'css-loader',
+        ],
       },
       {
         test: /\.scss$/,
         use: [
           'style-loader',
           'css-loader',
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       },
     ],
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
   },
-  // 2
   output: {
     path: `${__dirname}/dist`,
     publicPath: '/',
@@ -54,7 +52,6 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
   ],
-  // 3
   devServer: {
     contentBase: './dist',
     hot: true,
